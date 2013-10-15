@@ -1,7 +1,7 @@
 (function($){
 
 	$(function(){
-		var limit_min_width = 503;
+		var limit_min_width = 768;
 
 		$(window).bind("resize",function(e){
 			redraw();

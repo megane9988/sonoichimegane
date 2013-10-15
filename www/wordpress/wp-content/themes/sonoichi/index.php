@@ -16,7 +16,6 @@
 							<?php get_template_part( 'content', get_post_format() ); ?>
 	<?php endwhile; ?>
 							<?php sonoichi_page_nav(); ?>
-							<?php if ( is_singular())  comments_template(); ?>
 <?php else : ?>
 							<article id="post-0" class="post no-results not-found">
 								<div class="entry-info">

@@ -218,6 +218,30 @@ function sonoichi_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+	register_sidebar( array(
+		'name'          => 'Footer Widget Area',
+		'id'            => 'footer-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => 'Header Widget Area',
+		'id'            => 'header-1',
+		'before_widget' => '<div class="address">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => 'Front Page Widget Area',
+		'id'            => 'front-page-1',
+		'before_widget' => '<div class="feature">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'sonoichi_widgets_init' );
 
@@ -894,3 +918,16 @@ function sonoichi_nav_menu_args( $args ) {
 	return $args;
 }
 add_filter( 'wp_nav_menu_args', 'sonoichi_nav_menu_args' );
+/**
+ * add
+ * megane 
+ * Change home recent post count
+ */
+function change_posts_per_page($query) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return; 
+    if ( $query->is_front_page() ) {
+        $query->set( 'posts_per_page', '3' );
+    }
+}
+add_action( 'pre_get_posts', 'change_posts_per_page' );

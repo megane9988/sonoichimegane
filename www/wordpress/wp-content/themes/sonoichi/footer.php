@@ -1,5 +1,6 @@
 	<footer class="mod-pageFooter" role="contentinfo">
 		<div class="mod-pageFooter-inner">
+			<?php dynamic_sidebar( 'footer-1' ); ?>
 			<div class="mod-siteInfo">
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sonoichi' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'sonoichi' ); ?>"><?php printf( __( 'Proudly powered by %s', 'sonoichi' ), 'WordPress' ); ?></a>
 			</div>

@@ -35,8 +35,13 @@
 		<header class="mod-pageHeader noVisual" role="banner">
 <?php endif; ?>
 			<div class="mod-pageHeader-inner">
-				<h1 class="mod-pageHeader-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="mod-pageHeader-description"><?php bloginfo( 'description' ); ?></h2>
+				<div class="logo">
+					<h1 class="mod-pageHeader-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h2 class="mod-pageHeader-description"><?php bloginfo( 'description' ); ?></h2>
+				</div>
+				<div class="address">
+					<?php dynamic_sidebar( 'header-1' ); ?>
+				</div>
 			</div>
 		</header>
 		<!--/mod-pageHeader-->
@@ -46,3 +51,8 @@
 			<?php wp_nav_menu( array('theme_location' => 'primary' ) ); ?>
 		</nav>
 		<!--/mod-navGlobal-->
+		<?php if ( !is_home() ) {	?>		
+			<div id="bread_crumb" class="mod-bread_crumb" role="bread_crumb">
+				<?php if ( class_exists( 'WP_SiteManager_bread_crumb' ) ) { WP_SiteManager_bread_crumb::bread_crumb( 'type=string' ); } ?>
+			</div> 
+		<?php }?>
