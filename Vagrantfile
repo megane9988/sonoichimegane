@@ -21,7 +21,7 @@ WP_ADMIN_PASS      = "admin" # default user's password
 
 WP_DB_PREFIX       = 'wp_' # Database prefix
 
-WP_DEFAULT_PLUGINS = %w(theme-check plugin-check hotfix advanced-custom-fields contact-form-7 debug-bar jquery-lightbox-gallery jetpack ps-taxonomy-expander simple-map vaultpress wp-sitemanager wp-total-hacks yet-another-related-posts-plugin) # default plugins
+WP_DEFAULT_PLUGINS = %w(theme-check plugin-check hotfix advanced-custom-fields contact-form-7 debug-bar jquery-lightbox-gallery jetpack ps-taxonomy-expander simple-map vaultpress wp-sitemanager wp-total-hacks yet-another-related-posts-plugin wordpress-importer mp6) # default plugins
 WP_DEFAULT_THEME   = 'sonoichi' # e.g. twentythirteen
 
 WP_DIR             = '' # e.g. /wp or wp or other

@@ -36,12 +36,13 @@
 <?php endif; ?>
 			<div class="mod-pageHeader-inner">
 				<div class="logo">
-					<h1 class="mod-pageHeader-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 class="mod-pageHeader-description"><?php bloginfo( 'description' ); ?></h2>
+					<h1 class="mod-pageHeader-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+							<img src="http://placehold.it/150x70/f4f2f0/07141e&text=Logo" alt="">
+						</a>
+					</h1>
 				</div>
-				<div class="address">
 					<?php dynamic_sidebar( 'header-1' ); ?>
-				</div>
 			</div>
 		</header>
 		<!--/mod-pageHeader-->

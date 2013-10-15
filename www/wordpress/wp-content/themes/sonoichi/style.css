@@ -389,7 +389,7 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: #f4f2f0;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "arial", "ＭＳ Ｐゴシック", sans-serif;
   font-size: 120%;
   color: #444;
@@ -697,6 +697,7 @@ select {
   margin: 0 auto;
   padding: 0 24px;
   max-width: 1060px;
+  overflow: hidden;
 }
 .mod-pageHeader .mod-pageHeader-title {
   font-size: 200%;
@@ -932,9 +933,10 @@ select {
 @media screen and (min-width: 727px) {
   .mod-navGlobal {
     border-bottom: 1px solid #eee;
+    background-color: #07141e;
   }
   .mod-navGlobal .mod-navGlobal-toggleContent{
-    margin: .75em auto .75em;
+    margin: 0 auto;
     max-width: 1060px;
     
   }
@@ -951,7 +953,7 @@ select {
     margin: 1em -1px 1em 0;
   }
   .mod-navGlobal .mod-navGlobal-toggleContent li a, .mod-navGlobal .mod-navGlobal-toggleContent li span.more {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     display: block;
     margin: -1em 0;
@@ -1013,13 +1015,14 @@ select {
     width: 12px;
   }
   .mod-navGlobal .mod-navGlobal-toggleContent li li.parent {
-    background: #f8f8f8;
+    background: #07141e;
   }
   .mod-navGlobal .mod-navGlobal-toggleContent li ul.children {
-    background: #fff;
+    background: #07141e;
   }
   .mod-navGlobal .mod-navGlobal-toggleContent li ul.children li {
-    background: url(images/bg_navglobal_children.png) 0 0 repeat-x white;
+    /*background: url(images/bg_navglobal_children.png) 0 0 repeat-x white;*/
+    background: #07141e;
   }
   .mod-navGlobal .mod-navGlobal-toggleContent li ul.children a {
     padding-left: 2.5em;
@@ -1251,6 +1254,9 @@ select {
 }
 .mod-pageContent .mod-pageContent-primary-inner {
   width: 740px;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /*if lte ie8*/
@@ -1357,12 +1363,7 @@ select {
 }
 /*----------mod-pageFooter----------*/
 .mod-pageFooter {
-  background: -webkit-linear-gradient(top, #fcfcfc 85%, #fefefe);
-  background: -moz-linear-gradient(top, #fcfcfc 85%, #fefefe);
-  background: -ms-linear-gradient(top, #fcfcfc 85%, #fefefe);
-  background: -o-linear-gradient(top, #fcfcfc 85%, #fefefe);
-  background: linear-gradient(top, #fcfcfc 85%, #fefefe);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), color-stop(0.85, #fcfcfc), to(#fefefe));
+  background-color: #dddedd;
   border-top: 1px solid #eee;
   clear: both;
 }
@@ -1573,43 +1574,57 @@ select {
 }
 
 /*mod-navLocal*/
-.mod-navLocal {
+.mod-navLocal,.widget {
   padding: 0.25em 0;
 }
-.mod-navLocal li {
+.mod-navLocal li,
+.widget li {
   border-top: 1px solid #e0e0e0;
   margin-bottom: 0;
   margin-left: 0;
 }
-.mod-navLocal li:before {
+.mod-navLocal li:before,
+.widget li:before {
   display: none;
 }
-.mod-navLocal li a {
+.mod-navLocal li a,
+.widget li a
+ {
   color: #000;
   text-decoration: none;
   display: block;
   padding: 0.75em 1em;
 }
-.mod-navLocal li a:link, .mod-navLocal li a:visited {
+.mod-navLocal li a:link, 
+.mod-navLocal li a:visited,
+.widget li a:link, 
+.widget li a:visited
+ {
   text-decoration: none;
   color: #000;
 }
-.mod-navLocal li a:hover {
+.mod-navLocal li a:hover,
+.widget li a:hover {
   color: #808080;
 }
-.mod-navLocal li a:active {
+.mod-navLocal li a:active,
+.widget li a:active {
   color: #000;
 }
-.mod-navLocal li li a {
+.mod-navLocal li li a,
+.widget li li a {
   padding-left: 2em;
 }
-.mod-navLocal li li li a {
+.mod-navLocal li li li a,
+.widget li li li a {
   padding-left: 3em;
 }
-.mod-navLocal li li li li a {
+.mod-navLocal li li li li a,
+.widget li li li li a {
   padding-left: 4em;
 }
-.mod-navLocal .parent > a {
+.mod-navLocal .parent > a,
+.widget .parent > a {
   background: #f8f8f8;
   background: -webkit-linear-gradient(top, #f5f5f5, #f8f8f8 33%);
   background: -moz-linear-gradient(top, #f5f5f5, #f8f8f8 33%);
@@ -1621,12 +1636,14 @@ select {
 .mod-navLocal li.current_page_origin > a {
   font-weight: bold;
 }
-.mod-navLocal ul {
+.mod-navLocal ul,
+.widget ul {
   border-bottom: 1px solid #e0e0e0;
   margin: 0;
   list-style: none;
 }
-.mod-navLocal ul ul {
+.mod-navLocal ul ul,
+.widget ul ul {
   border-bottom: 0;
 }
 
@@ -2265,9 +2282,10 @@ img.alignright {
 .widget select {
   max-width: 100%;
 }
-.widget .widget-title {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 0.5em;
+.widget .widget-title {  
+  background-color: #000;
+  padding: 10px;
+  color: #fff;
 }
 
 /*widget_search*/
@@ -2535,6 +2553,6 @@ border: 1px solid #ccc;
     background-image: url(/wp-content/themes/sonoichi/images/top_main_sp3.jpg);
   }
   .mod-navGlobal {
-    background-color: #ccc;
+    background-color: #07141e;
   }
 }
