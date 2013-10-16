@@ -2,6 +2,11 @@
 	<div class="mod-pageContent main-img<?php echo rand(1, 3); ?>">
 		<div class="mod-pageContent-inner">
 			<div class="mod-pageContent-wrapper">
+				<!-- <div class="main-img-text">
+					<h1>
+						今企業において<br>色彩戦略が必要です。
+					</h1>
+				</div>	 -->
 				<div id="content" role="main">
 					<div class="front-news">
 						<h1>最新のお知らせ</h1>

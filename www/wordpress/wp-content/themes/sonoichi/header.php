@@ -38,7 +38,7 @@
 				<div class="logo">
 					<h1 class="mod-pageHeader-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-							<img src="http://placehold.it/150x70/f4f2f0/07141e&text=Logo" alt="">
+							<img src="<?php bloginfo('template_directory'); ?>/images/unique/logo.png" alt="" style="width:150; height:70px;">
 						</a>
 					</h1>
 				</div>
